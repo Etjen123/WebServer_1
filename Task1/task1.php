@@ -1,41 +1,35 @@
 <html>
+<head>
 
+</head>
 <body>
+
 
 <?php
 
-function validate($info)
-	{
-		print $info[1];
-	}
+include "validate.php";
 
-$firstname = $$_GET('firstname');
-$lastname = $_GET('lastname');
+$user["firstname"] = $_GET['firstname'];
+$user["lastname"]= $_GET['lastname'];
 
-$f_pass = $_GET('f_pass');
-$s_pass = $_GET('s_pass');
+$user["f_pass"] = $_GET['f_pass'];
+$user["s_pass"] = $_GET['s_pass'];
 
-$day = $_GET('day');
-$month = $_GET('month');
-$year = $_GET('year');
+$user["day"] = $_GET['day'];
+$user["month"] = $_GET['month'];
+$user["year"] = $_GET['year'];
 
-$gender = $_GET('gender');
+$user["gender"] = $_GET['gender'];
 
-$java = $_GET('java');
-$c = $_GET('c');
-$objectivec = $_GET('objectivec');
+$java = $_GET['java'];
+$c = $_GET['c'];
+$objectivec = $_GET['objectivec'];
 
-$email = $_GET('email');
-$url = $_GET('url');
-
-$info = get_defined_vars();
-
+$user["email"] = $_GET['email'];
+$user["url"] = $_GET['url'];
 	
-	
-	validate($info);
-{
-		
-}
+validate($user);
+
 
 ?>
 
