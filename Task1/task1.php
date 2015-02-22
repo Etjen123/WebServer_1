@@ -12,6 +12,7 @@ include 'empty.php';
 //include 'email.php';
 //include'url.php';
 //include 'password.php'; 
+//include 'birthday.php';
 
 $user["firstname"] = $_GET['firstname'];
 $user["lastname"]= $_GET['lastname'];
@@ -41,6 +42,10 @@ validate($user);
 //validateUrl($user["url"]);
 //validateEmail($user["email"]);
 //validatePassword($user["f_pass"], $user["s_pass"]);
+//validateBirthday($user["day"],$user["month"],$user["year"]);
+
+
+
 ?>
 
 </body>
