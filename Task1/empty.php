@@ -12,10 +12,15 @@ function validate($arr)
 			}
 		}
 		
-			if($errors>0)
-				return true;
-			else
+			if($errors>0){
+				echo "wrong";
 				return false;
+				
+				}				
+			else{
+				echo "correct";
+				return true;
+				}
 }
 
 ?>

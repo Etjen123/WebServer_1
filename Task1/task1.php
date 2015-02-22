@@ -7,7 +7,11 @@
 
 <?php
 
-include "validate.php";
+include 'empty.php';
+//include 'name.php';
+//include 'email.php';
+//include'url.php';
+//include 'password.php'; 
 
 $user["firstname"] = $_GET['firstname'];
 $user["lastname"]= $_GET['lastname'];
@@ -27,10 +31,16 @@ $objectivec = $_GET['objectivec'];
 
 $user["email"] = $_GET['email'];
 $user["url"] = $_GET['url'];
-	
+
+$name = $user["firstname"]. " " .$user["lastname"];
+$birthday = $user["day"]."/".$user["month"]."/".$user["year"];
+
+
 validate($user);
-
-
+//validateName($name);
+//validateUrl($user["url"]);
+//validateEmail($user["email"]);
+//validatePassword($user["f_pass"], $user["s_pass"]);
 ?>
 
 </body>
