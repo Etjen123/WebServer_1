@@ -5,7 +5,7 @@ $currMonth=date("m");
 $currYear=date("Y");
 
 
-if(@checkdate($month,$day,$year)){
+if(checkdate($month,$day,$year)){
 	if($currYear-$year>18)
 	   echo "Correct";
 	else if($currYear-$year==18){
@@ -21,7 +21,7 @@ if(@checkdate($month,$day,$year)){
 	else
 	echo "below 18";}
 else
-echo "Wrong date</br>";
+echo "Wrong date";
 	
 
 }

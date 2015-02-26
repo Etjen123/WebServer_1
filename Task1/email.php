@@ -5,7 +5,7 @@ function validateEmail($email)
 {
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
-  	$emailErr = "Invalid Email</br>"; 
+  	$emailErr = "Invalid Email"; 
   	echo $emailErr;
   	return false;
 	}
