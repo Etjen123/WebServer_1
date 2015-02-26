@@ -13,7 +13,7 @@ function validate($arr)
 		}
 		
 			if($errors>0){
-				echo "wrong";
+				echo "wrong</br>";
 				return false;
 				
 				}				
