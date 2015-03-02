@@ -1,19 +1,25 @@
 <?php
-function validateName($fullname){
+function validateName($name){
 
-if(!preg_match("/^[a-zA-Z'. -]+$/", stripslashes($fullname)) )
-{
-	$nameErr="Invalid First Name</br>";
-	echo $nameErr;
-}
+	if (isset($name))
+	{
+		if(empty(trim($name)))
+		{
+				echo "All fields must be filled!";
+				return false;
+		}
+		
+		else if(!preg_match("/^[a-zA-Z'. -]+$/", stripslashes(trim($name))) )
+		{
+			$nameErr="Invalid Name</br>";
+			echo $nameErr;
+			return false;
+		}
+		else return true;
+		
 	
-
-
+	}
+	else return true;
 }
-
-
-
-
-
 
 ?>
