@@ -13,7 +13,7 @@ include 'password.php';
 include 'birthday.php';
 include 'gender.php';
 include 'age_range.php';
-include 'full_validation.php';
+
 
 @$firstname = $_GET['firstname'];
 @$lastname= $_GET['lastname'];
@@ -116,7 +116,7 @@ include 'full_validation.php';
 				header('Location: http://localhost/Task1/landing.php?firstname='.$firstname.'&lastname='.$lastname.'&birthday='.$birthday.'&gender='.$gender.'&knowledge='.$knowledge.'&email='.$email.'&url='.$url);
 				exit();
 		}
-?>
+	?>
 
 	
 </form>
