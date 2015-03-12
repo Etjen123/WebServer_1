@@ -5,13 +5,13 @@ function validateName($name){
 	{
 		if(empty(trim($name)))
 		{
-				echo "<div class='error'> Enter your full name! </div>";
+				echo "<div class='required'> *First Name OR Last Name missing! </div>";
 				return false;
 		}
 		
 		else if(!preg_match("/^[a-zA-Z'. -]+$/", stripslashes(trim($name))) )
 		{
-			$nameErr="<div class='error'> Please enter a valid name (no numbers or special characters allowed)! </div>";
+			$nameErr="<div id='required'> Name Field Error: Invalid Name OR Surname</div>";
 			echo $nameErr;
 			return false;
 		}

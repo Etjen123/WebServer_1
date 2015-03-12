@@ -5,3 +5,13 @@ margin-left:60px;
 input[type="checkbox"]{
 margin-left:60px;
 }
+
+
+.error{
+	font-size: 14px;
+	color:red;
+}
+
+.hide{
+	visibility: hidden;
+}
