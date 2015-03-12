@@ -1,6 +1,9 @@
 <html>
 <head>
+<<<<<<< HEAD
   <link rel="stylesheet" type="text/css" href="style.css" />
+=======
+>>>>>>> origin/master
 <?php 
 
 
@@ -29,12 +32,19 @@ echo "<h2>Welcome ".$row['firstname']." ".$row['lastname']."</h2>";
 
 $balance = mysqli_query($con,"SELECT balance FROM user WHERE account_no='$account_no'");
 		$row = mysqli_fetch_array($balance, MYSQLI_ASSOC);
+<<<<<<< HEAD
 	echo "<p id='bal'>Your balance is: ".$row['balance']. "$ </p>";
+=======
+	echo $row['balance'];
+>>>>>>> origin/master
 ?>
 </head>
 
 <body>
+<<<<<<< HEAD
   
+=======
+>>>>>>> origin/master
 <form method="get" action="balance.php"  class="form">
 <input type="submit"  value="Get Balance"> 
 </form>

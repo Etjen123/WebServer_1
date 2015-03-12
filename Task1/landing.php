@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -14,6 +15,10 @@
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+=======
+<html>
+<head>
+>>>>>>> origin/master
 </head>
 
 <body>
@@ -26,6 +31,7 @@
 @$f_pass = $_GET['f_pass'];
 @$s_pass = $_GET['s_pass'];
 
+<<<<<<< HEAD
 
 @$gender = $_GET['gender'];
 
@@ -48,6 +54,27 @@
 <style type="text/css">
    body { background: #ededed; }
 </style>
+=======
+@$day = $_GET['day'];
+@$month = $_GET['month'];
+@$year = $_GET['year'];
+
+@$gender = $_GET['gender'];
+
+@$java = $_GET['java'];
+@$c = $_GET['c'];
+@$objectivec = $_GET['objectivec'];
+
+@$email = $_GET['email'];
+@$url = $_GET['url'];
+
+@$birthday = $day."/".$month."/".$year;
+@$knowledge = $java."/".$c."/".$objectivec;
+
+ ?>
+
+<h2><?php echo $firstname." ".$lastname;?></h2>
+>>>>>>> origin/master
 
 </body>
 </html>

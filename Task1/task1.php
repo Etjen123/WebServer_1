@@ -50,14 +50,20 @@ include 'age_range.php';
 @$url = $_GET['url'];
 
 @$birthday = $day."/".$month."/".$year;
+<<<<<<< HEAD
 @$knowledge = $java."/".$c."/".$objective_c;
 
 
+=======
+@$knowledge = $java."/".$c."/".$objectivec;
+
+>>>>>>> origin/master
 
 
 ?>
 
 <form method="get" action="<?php  echo $_SERVER['PHP_SELF'];?>"  class="form">
+<<<<<<< HEAD
 	<div class="container">
 
 	<div class="panel panel-primary">
@@ -101,6 +107,52 @@ include 'age_range.php';
   <?php validateBirthday($day,$month,$year);?>
 </div>
 
+=======
+
+	<p>
+	First Name:<br />
+	<input type="text" name="firstname" size="30" value="<?php echo (isset($_GET['firstname'])) ? $_GET['firstname'] : " "; ?>"	/><?php validateName($firstname);?>
+	</p>
+
+	<p>
+	Last Name:<br />
+	<input type="text" name="lastname" size="30" value="<?php echo (isset($_GET['lastname'])) ? $_GET['lastname'] : " "; ?>"/><?php validateName($lastname);?>
+	</p>
+	
+	<p>
+	Enter Password:<br />
+	<input type="password" name="f_pass" size="30" /><?php validatePassword($f_pass,$s_pass) ?>
+	</p>
+	
+	<p>
+	Re-Enter Password:<br />
+	<input type="password" name="s_pass" size="30" /> 
+	</p>
+	
+	<p>
+	Enter Birthday (dd/mm/yyyy):<br />
+	<input type="text" name="day" size="2"  value="<?php echo (isset($_GET['day'])) ? $_GET['day'] : " "; ?>"	 />/
+	<input type="text" name="month" size="2" value="<?php echo (isset($_GET['month'])) ? $_GET['month'] : " "; ?>"	 />/
+	<input type="text" name="year" size="4" value="<?php echo (isset($_GET['year'])) ? $_GET['year'] : " "; ?>"	 /> 
+	<?php validateBirthday($day,$month,$year);?>
+	</p>
+	
+	<p>
+	Gender:
+	<?php validateGender();?>
+	
+	<br /><input type="radio" name="gender" value="Male" <?php if(@$_GET['gender']=="Male") echo "checked"; ?> /> Male
+	<br /><input type="radio" name="gender" value="Female" <?php if(@$_GET['gender']=="Female") echo "checked"; ?>/> Female
+	</p>
+	
+	<p>
+	Age:
+	<?php age_range();	?>
+	<br /><input type="radio" name="age" value="18-25" <?php if(@$_GET['age']=="18-25") echo "checked"; ?> /> 18-25
+	<br /><input type="radio" name="age" value="26-30" <?php if(@$_GET['age']=="26-30") echo "checked"; ?> /> 26-30
+	<br /><input type="radio" name="age" value="31-35" <?php if(@$_GET['age']=="31-35") echo "checked"; ?>/> 31-35
+	</p>
+>>>>>>> origin/master
 	
 	<div class="radio">
   <span class="input-group-addon" id="basic-addon">Gender</span>
@@ -112,6 +164,7 @@ include 'age_range.php';
 </div>
 	<p>
 	
+<<<<<<< HEAD
 	<div class="radio">
   <span class="input-group-addon" id="basic-addon">Age</span>
   
@@ -171,6 +224,33 @@ include 'age_range.php';
    body { background: #ededed; }
 </style>
 	</div>
+=======
+	<p>
+	Email:<br />
+	<input type="text" name="email" size="30" value="<?php echo (isset($_GET['email'])) ? $_GET['email'] : " "; ?>"	 />
+	<?php validateEmail($email);?>
+	</p>
+	
+	<p>
+	URL:<br />
+	<input type="text" name="url" size="30" value="<?php echo (isset($_GET['url'])) ? $_GET['url'] : " "; ?>"/> 
+	<?php  validateUrl($url);	?>
+	</p>
+	
+	<p>
+	<input type="submit" name="submit" value="Submit Information" />
+	</p>
+	<?php
+	
+		if(  validateName($firstname) && validateName($lastname)  && validatePassword($f_pass,$s_pass)  && validateBirthday($day,$month,$year) && validateGender() && age_range() && validateEmail($email) && validateUrl($url) && isset($_GET['submit']))
+		{
+				header('Location: http://localhost/Task1/landing.php?firstname='.$firstname.'&lastname='.$lastname.'&birthday='.$birthday.'&gender='.$gender.'&knowledge='.$knowledge.'&email='.$email.'&url='.$url);
+				exit();
+		}
+	?>
+
+	
+>>>>>>> origin/master
 </form>
 
 </body>

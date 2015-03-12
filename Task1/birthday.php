@@ -9,8 +9,13 @@ $currYear=date("Y");
 	{
 		
 		if(empty(trim($day)) || empty(trim($month)) || empty(trim($year)))
+<<<<<<< HEAD
 		{	
 			echo "<div class='error'> Birthday field must be filled! </div>";
+=======
+		{
+			echo "All fields must be filled!";
+>>>>>>> origin/master
 				return false;
 		}
 		
@@ -25,6 +30,7 @@ $currYear=date("Y");
 						 return true;
 						 else
 						 {
+<<<<<<< HEAD
 						 echo "<div class='error'> You have to be older than 18! </div>";
 						 	return false;
 						 }}
@@ -35,6 +41,18 @@ $currYear=date("Y");
 		else
 		{
 		 echo "<div class='error'> Invalid Date! </div></br>";
+=======
+						 echo "You have to be older than 18!";
+						 	return false;
+						 }}
+				 else
+				 echo "You have to be older than 18!"; 	return false;}
+			else
+			echo "You have to be older than 18!"; 	return false;}
+		else
+		{
+		 echo "Wrong date</br>";
+>>>>>>> origin/master
 		 	return false;
 		}
 	 

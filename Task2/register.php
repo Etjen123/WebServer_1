@@ -15,7 +15,10 @@ Online Banking
 include 'name.php';
 include 'password.php';
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 @$firstname = $_GET['firstname'];
 @$lastname = $_GET['lastname'];
 @$f_pass = $_GET['f_pass'];
@@ -25,6 +28,7 @@ include 'password.php';
 
 ?>
 <body>
+<<<<<<< HEAD
 	<section class="container">
 <h1 class="header">Enter your data below</h1>
 
@@ -33,16 +37,33 @@ include 'password.php';
 	<p>
 	First Name:<br />
 	<input type="text" name="firstname" size="30" value="<?php echo (isset($_GET['firstname'])) ? $_GET['firstname'] : " "; ?>" /> 
+=======
+<h1 class="header">Enter your data below</h1>
+
+<form method="get" action="<?php  echo $_SERVER['PHP_SELF'];?>" class="form">
+
+	<p>
+	First Name:<br />
+	<input type="text" name="firstname" size="30" value="<?php echo (isset($_GET['firstname'])) ? $_GET['firstname'] : " "; ?>" /> <?php validateName($firstname);?>
+>>>>>>> origin/master
 	</p>
 
 	<p>
 	Last Name:<br />
+<<<<<<< HEAD
 	<input type="text" name="lastname" size="30" value="<?php echo (isset($_GET['lastname'])) ? $_GET['lastname'] : " "; ?>" /> 
+=======
+	<input type="text" name="lastname" size="30" value="<?php echo (isset($_GET['lastname'])) ? $_GET['lastname'] : " "; ?>" /> <?php validateName($lastname);?>
+>>>>>>> origin/master
 	</p>
 	
 	<p>
 	Enter Password:<br />
+<<<<<<< HEAD
 	<input type="password" name="f_pass" size="30" />
+=======
+	<input type="password" name="f_pass" size="30" /><?php validatePassword($f_pass,$s_pass);?>
+>>>>>>> origin/master
 	</p>
 	
 	<p>
@@ -60,6 +81,7 @@ include 'password.php';
 	</p>
 	
 	<p>Already have an account? 
+<<<<<<< HEAD
 	<a href="login.php"><button class="button" type="button">Login</button></a>
 	</p>
 	<section class="container">
@@ -74,6 +96,11 @@ include 'password.php';
 </section>
 	
 	<div class="hide">
+=======
+	<a href="login.php"><button type="button">Login</button></a>
+	</p>
+
+>>>>>>> origin/master
 	<?php 
 	if( validateName($firstname) && validateName($lastname) && validatePassword($f_pass,$s_pass) && isset($_GET['submit']))
 	{	
@@ -110,6 +137,7 @@ include 'password.php';
 		
 		  if($result)
 		  {
+<<<<<<< HEAD
 		  echo "<p id='reg'>Registration successful!</br>" ;
 		  echo "This is your account number: ".$account_no."</p>";
 		  }
@@ -119,6 +147,15 @@ include 'password.php';
 
 	?>
 </div>
+=======
+		  echo "Registration successful!</br>";
+		  echo "This is your account number: ".$account_no;
+		  }
+		  
+	}	
+
+	?>
+>>>>>>> origin/master
 </form>
 
 </body>

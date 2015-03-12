@@ -1,6 +1,9 @@
 <html>
 <head>
+<<<<<<< HEAD
 	<link rel="stylesheet" type="text/css" href="style.css" />
+=======
+>>>>>>> origin/master
 </head>
 
 <body>
@@ -29,6 +32,7 @@ if (!$db)
 $result = mysqli_query($con,"SELECT * FROM user WHERE account_no='$account_no'");
 
 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+<<<<<<< HEAD
 
 
 echo "<div class='container'>";
@@ -115,5 +119,30 @@ echo "</div>";
 	?>
 	
  </div>
+=======
+echo "<h2>Welcome ".$row['firstname']." ".$row['lastname']."</h2>";
+ 
+
+
+?>
+<form method="get" action="balance.php"  class="form">
+<input type="submit"  value="Get Balance"> 
+</form>
+
+<table>
+<form method="get" action="credit.php"  class="form"> 
+<tr><td><input type="submit"  value="Credit Account"></td> <td><input type="text" name="credit"/></td></tr>
+</form>
+
+<form method="get" action="debit.php"  class="form"> 
+<tr><td><input type="submit"  value="Debit account"></td><td> <input type="text" name="debit"/></td></tr>
+
+</form>
+</table>
+
+	<form action="register.php">
+	<input type="submit" value="Logout">
+	</form>
+>>>>>>> origin/master
 </body>
 </html>

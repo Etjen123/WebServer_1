@@ -68,11 +68,18 @@ if(isset($_GET['submit']))
 
 
 <body>
+<<<<<<< HEAD
 <section class="container">
 <h1 class="header">Log in into your Bank account</h1>
 
 <form method="get" action="<?php  echo $_SERVER['PHP_SELF'];?>" class="form">
 <section class="container2">
+=======
+<h1 class="header">Log in into your Bank account</h1>
+
+<form method="get" action="<?php  echo $_SERVER['PHP_SELF'];?>" class="form">
+
+>>>>>>> origin/master
 	<p>
 	Last Name:<br />
 	<input type="text" name="lastname" size="30" />
@@ -93,11 +100,17 @@ if(isset($_GET['submit']))
 	<input type="submit" name='submit' value="Login" />
 	</p>
 
+<<<<<<< HEAD
 	<p>Don't have an account?
 	<a href="register.php"><button class="button" type="button">Register</button></a>
 	</p>
 </section>
 </section>
+=======
+	<p>Don't have an account? 
+	<a href="register.php"><button type="button">Register</button></a>
+	</p>
+>>>>>>> origin/master
 </form>
 
 </body>
